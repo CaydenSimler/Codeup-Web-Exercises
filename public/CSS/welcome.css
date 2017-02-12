@@ -67,6 +67,7 @@ body {
 
 .navigationbar-portfolio {
 	font-size: 150%;
+	text-align: center;
 }
 
 .navigationbar-resume {
@@ -99,6 +100,13 @@ body {
 	text-align: center;
 }
 
+.aboutmecontent {
+	background-color: #212121;
+	opacity: .95;
+	color: #6DD6D2;
+	font-size: 200%;
+	text-align: center;	
+}
 
 /*Current Project*/
 
@@ -109,6 +117,15 @@ body {
 	font-size: 250%;
 	text-align: center;
 }
+
+.currentprojectcontent {
+	background-color: #212121;
+	opacity: .95;
+	color: #6DD6D2;
+	font-size: 200%;
+	text-align: center;
+}
+
 
 
 /*Resume*/
@@ -138,12 +155,9 @@ body {
 .portfolio {
 	background-color: #212121;
 	opacity: .95;
-	top: 70px;
 	color: #6DD6D2;
 	font-size: 200%;
 	text-align: center;
-	padding: 10px;
-	margin-top: 30px;
 }
 
 
@@ -154,6 +168,13 @@ body {
 	margin-top: 20px;
 	margin-left: 35px;
 	margin-right: 15px;
+}
+
+
+/*Invisible Text Extensions*/
+
+.invisibletext1 {
+	margin-top: 100px;
 }
 
 
