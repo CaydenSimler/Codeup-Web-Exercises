@@ -67,7 +67,6 @@ body {
 
 .navigationbar-portfolio {
 	font-size: 150%;
-	text-align: center;
 }
 
 .navigationbar-resume {
@@ -87,6 +86,16 @@ body {
 .contactform {
 	width: 500px;
 	margin: 15px;
+}
+
+.twitter-logo {
+	width: 22px;
+	height: 22px;
+}
+
+.linkedin-logo {
+	width: 22px;
+	height: 22px;
 }
 
 
@@ -125,7 +134,6 @@ body {
 	font-size: 200%;
 	text-align: center;
 }
-
 
 
 /*Resume*/
