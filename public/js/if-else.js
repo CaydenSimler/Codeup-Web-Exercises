@@ -19,7 +19,7 @@ var georgeSpent = 320;
 
 if (cameronSpent > 200) {
 	var cameronDiscount = cameronSpent - (cameronSpent * .35);
-	console.log("Cameron's total was $180 before the discount, but after the discount was applied, he spent $" + cameronDiscount + ".");
+	console.log("Cameron's total was $180 before the discount, but after the discount was applied, his new total is $" + cameronDiscount + ".");
 } else {
 	console.log("Cameron's total was $" + cameronSpent + " and no discount was applied.");
 }
@@ -27,7 +27,7 @@ if (cameronSpent > 200) {
 
 if (ryanSpent > 200) {
 	var ryanDiscount = ryanSpent - (ryanSpent * .35);
-	console.log("Ryan's total was $250 before the discount, but after the discount was applied, he spent $" + ryanDiscount + ".");
+	console.log("Ryan's total was $250 before the discount, but after the discount was applied, his new total is $" + ryanDiscount + ".");
 } else {
 	console.log("Ryan's total was $" + ryanSpent + " and no discount was applied.");
 }
@@ -35,7 +35,7 @@ if (ryanSpent > 200) {
 
 if (georgeSpent > 200) {
 	var georgeDiscount = georgeSpent - (georgeSpent * .35);
-	console.log("George's total was $320 before the discount, but after the discount was applied, he spent $" + georgeDiscount + ".");
+	console.log("George's total was $320 before the discount, but after the discount was applied, his new total is $" + georgeDiscount + ".");
 } else {
 	console.log("George's total was $" + georgeSpent + " and no discount was applied.");
 }
