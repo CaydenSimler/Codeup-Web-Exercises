@@ -1,8 +1,8 @@
 "use strict";
 
-var gradeAverage = (70 + 80 + 95)/3;
-var awesome = "You're awesome!";
-var notawesome = "You need to practice more.";
+var gradeAverage = (70 + 80 + 95)/3,
+	awesome = "You're awesome!",
+	notawesome = "You need to practice more.";
 
 if (gradeAverage > 80) {
 	console.log(awesome);
@@ -12,9 +12,9 @@ if (gradeAverage > 80) {
 
 
 
-var cameronSpent = 180;
-var ryanSpent = 250;
-var georgeSpent = 320;
+var cameronSpent = 180,
+	ryanSpent = 250,
+	georgeSpent = 320;
 
 
 if (cameronSpent > 200) {
@@ -42,9 +42,9 @@ if (georgeSpent > 200) {
 
 
 
-var flipACoin = Math.floor(Math.random()* 2)
-var buyACar = "Isaac should buy a car";
-var buyAHouse = "Isaac should buy a house";
+var flipACoin = Math.floor(Math.random()* 2),
+	buyACar = "Isaac should buy a car",
+	buyAHouse = "Isaac should buy a house";
 
 
 if (flipACoin == 0) {
