@@ -110,11 +110,14 @@ body {
 }
 
 .aboutmecontent {
-	background-color: #212121;
 	opacity: .95;
 	color: #6DD6D2;
 	font-size: 200%;
 	text-align: center;	
+}
+
+.aboutmecontentspan {
+	background-color: #212121;
 }
 
 /*Current Project*/

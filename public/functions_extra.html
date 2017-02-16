@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scope Demo</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+	"use strict";
+
+	function log(input) {
+		console.log(input);
+	}
+
+	var result = log("input example");
+	console.log(result)
+
+	function randomNumber(min, max) {
+		return Math.floor(Math.random() * (max - min + 1) + min)
+	}
+
+
+
+
+	function add(a, b) {
+		return a + b;
+	}
+
+	function subtract(a, b) {
+		return a - b;
+	}
+
+	function multiply(a, b) {
+		return a * b;
+	}
+
+	function divide(a, b) {
+		return a / b;
+	}
+
+	function square(a) {
+		return multiply(a, a); 
+	}
+
+	function sumOfSquares(a, b) {
+		return multiply(a, a) + multiply(b, b);
+	}
+
+	console.log(sumOfSquares(3, 7));
+
+	var agesAndNames = [21, "Cayden"];
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
