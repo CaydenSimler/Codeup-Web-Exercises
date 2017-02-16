@@ -1,0 +1,78 @@
+var someArray = []; --- declare array
+var ages = [22, 24, 19, 26, 34]; --- declare and initialize array
+
+var agesAndNames = [21, "Cayden"];
+
+var anotherArray = ["hello", "world"];
+var anotherArray = new Array("hello", "world");
+
+VIEW CONTENTS OF ARRAY:
+
+	console.log(ages);
+
+CONTINUING ARRAY ITEMS:
+	
+	console.log(ages.length);
+
+ACCESSING ARRAY ELEMENTS AND ARRAY INDEX:
+	
+	console.log(ages[3]);
+
+ACCESSING UNDEFINED INDEX:
+
+	console.log(ages[30]);
+
+	ages[30] = "fred";
+
+	console.log(ages);
+
+--------------------------------------------------------------------------------------------
+
+For-each loop
+
+var names = ["Cayden", "Wes", "Emylee", "Suzanne"];
+
+for (var i = 0; i < names.length; i++) {
+	console.log(names[i]);
+}
+
+
+names.forEach(function (element, index, array) {
+	console.log(element);
+});
+
+
+element are the names
+index is the iterator
+array is the names array itself
+
+
+----------------------------------------------------------------------------------------------
+
+MANIPULATING ARRAYS:
+
+push and unshift items can be used to add items to an array
+
+	unshift: add to the beginning of an array
+	push: add to the end of an array
+
+
+pop and shift can be used to remove items from an array
+
+	shift: removes item from the beginning of an array
+	pop: removes item from the end of an array
+
+
+arrayName.splice(startIndex, numberOfItemsToRemove, replacement)
+
+names.splice(3, 0, "Sean");
+
+names.sort();
+
+
+
+
+
+
+
+
