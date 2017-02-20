@@ -1,0 +1,38 @@
+Referencing the DOM by ID
+	document.getElementById("id goes here");
+	HTML element
+
+Referencing the DOM by Tag Name
+	(div, h1, p)
+	document.getElementsByTagName("p");
+	NodeList of HTML elements with that HTML tag
+
+	console.log(paragraphs[0]);
+		console.logs the first element in the collection
+
+	for (var i = 0; i < paragraphs.length; i++)
+		console.logs all elements in the collection
+
+Referencing the DOM by Class Name
+	document.getElementsByClassName("class goes here");
+	NodeList of HTML elements with that class name
+
+Targeting Form Inputs
+	document.forms.(name of form).(id from specific element in form)
+	document.forms.login.username;
+
+Targeting innerText and innerHTML
+	document.getElementById("id goes here");
+	(id).innerHTML = "<h2>I am in a red box.</h2>";
+
+Attributes
+	document.hasAttribute()
+	document.getAttribute()
+	document.setAttribute()
+	document.removeAttribute()
+
+Data style and attribute in HTML5
+	purpleBall.style.border = purpleBall.dataset.flame;
+
+Creating an element and adding to the DOM
+	document.createElement("div")
