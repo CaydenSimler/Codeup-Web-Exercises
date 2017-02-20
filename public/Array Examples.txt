@@ -70,6 +70,23 @@ names.splice(3, 0, "Sean");
 names.sort();
 
 
+SPLIT AND JOIN:
+
+var namesString = "Cayden, Wes, Emylee";
+
+console.log(namesString);
+
+var namesArray = namesString.split(",");
+
+console.log(namesArray)
+
+var namesString = namesArray.join(",")
+
+console.log(namesString)
+
+
+
+
 
 
 

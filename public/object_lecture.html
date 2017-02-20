@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object Lecture</title>
+</head>
+<body>
+
+<script type="javascript/text">
+"use strict";
+
+var cellPhone = {
+// Properties
+	color: "black",
+	brand: "iPhone",
+	model: "6s",
+	storage: "16gb",
+	manufactured: "2015",
+	carrier: "AT&T",
+	locked: true,
+// Methods
+	unclock: function() {
+		this.locked = false;
+	},
+	lock: function() {
+		this.locked = true;
+	},
+	makeACall: function() {
+		return "Making a call";
+	},
+	text: function() {
+		return "Sending a text";
+	},
+}
+
+console.log(cellPhone);
+
+
+// Create an object with a constructor
+
+	var pizza = new Object();
+
+// Create an object with literal notation
+
+	var pizza = {};
+
+	console.log(typeof pizza);
+
+// Assign properties with dot notation
+
+	pizza.sauce = "tomato";
+	pizza.cheese = "mozzarella";
+	pizza.crust = "thin";
+
+	console.log(pizza);
+
+// Assign properties with array notation
+
+	pizza["sauce"] = "tomato";
+
+// Create object and assign values together
+
+	var pizza = {
+		sauce: "tomato",
+		cheese: "mozzarella",
+		crust: "thin"
+	}
+
+	console.log(pizza);
+
+// Creating Methods
+
+	var pizza = {
+		"sauce": "tomato",
+		"cheese": "mozzarella",
+		"crust": "thin",
+		"cutPizza": function () {
+			return "Slice, Slice!"
+		}
+	}
+
+// This keyword
+
+	pizza.make = function() {
+		return "Bake " + this.sauce + ", " + this.cheese;
+	}
+
+	console.log(pizza);
+
+	var yummyPizza = pizza.make();
+
+	console.log(yummyPizza);
+
+
+	var car = {};
+	var.make = "Kia";
+	var.model = "Optima";
+
+	car.logMakeModel = function () {
+		console.log("Car make/model is: " + this.make + " " + this.model)
+	}
+
+	car.logMakeModel();
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

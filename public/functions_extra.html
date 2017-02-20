@@ -8,21 +8,49 @@
 
 <script type="text/javascript">
 
+
+
 	"use strict";
 
 	function log(input) {
 		console.log(input);
 	}
 
-	var result = log("input example");
+	var result = log("Cayden");
 	console.log(result)
 
-	function randomNumber(min, max) {
-		return Math.floor(Math.random() * (max - min + 1) + min)
+console.log("--------------------------");
+
+	function identity(input) {
+		return(input);
 	}
 
+	var result = identity("Cayden2");
+	console.log(result);
 
+console.log("------------------------");
 
+	function randomNumber(min, max) {
+		return Math.floor(Math.random() * (max - min + 1) + min);
+		console.log(min, max);
+	}
+
+	var random = randomNumber(1, 100);
+	console.log(random);
+
+console.log("-------------------------");
+
+	function isNumeric(input) {
+		if(!isNaN(input)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	console.log(isNumeric("1"));
+
+console.log("-------------------------");
 
 	function add(a, b) {
 		return a + b;
@@ -45,15 +73,8 @@
 	}
 
 	function sumOfSquares(a, b) {
-		return multiply(a, a) + multiply(b, b);
+		return sum(square(a), square(b));
 	}
-
-	console.log(sumOfSquares(3, 7));
-
-	var agesAndNames = [21, "Cayden"];
-
-
-
 
 
 
