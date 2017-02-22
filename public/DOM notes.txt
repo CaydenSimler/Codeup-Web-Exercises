@@ -36,3 +36,18 @@ Data style and attribute in HTML5
 
 Creating an element and adding to the DOM
 	document.createElement("div")
+
+
+
+Event Listener
+	element.addEventListener("click", (function goes here));
+
+
+
+
+
+
+
+
+
+
