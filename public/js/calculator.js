@@ -80,7 +80,7 @@ function multiplication() {
 	inputOne = parseFloat(textArea.value).toFixed(2);
 	operator = "*";
 	textArea.value = textArea.defaultValue;
-}
+}	
 
 function division() {
 	inputOne = parseFloat(textArea.value).toFixed(2);

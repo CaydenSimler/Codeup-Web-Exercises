@@ -1,0 +1,21 @@
+API = application program interface
+	interface for your program to talk to other programs
+	give an interface that we can use
+		(lightswitch is an interface)
+	interface hide the details
+	interface defines what we can ask of the other program
+
+
+BOM
+	set interval, set timeout, alert, console.log, prompt, confirm
+
+DOM (browser's API for the HTML document)
+	.addEventListener, document.getElement(s)ById/Tag/Class
+		all part of the interface that the DOM makes available to JS
+
+We will build our own APIs (forms, buttons, links)
+
+
+My API Key: AIzaSyCEcCqBODkGYP0bX7Z1XlsBbS0vrjhR-2Q
+
+Make sure to add height and width of the div that your map is in

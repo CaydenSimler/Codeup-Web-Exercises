@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="css/google_maps_api.css">
+    <style type="text/css">
+        #map-canvas {
+            width: 1000px;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div to hold map -->
+    <div id="map-canvas"></div>
+
+    <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEcCqBODkGYP0bX7Z1XlsBbS0vrjhR-2Q"></script>
+
+    <!-- Script to show address on map -->
+    <script type="text/javascript">
+    (function() {
+        "use strict";
+
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 19,
+            mapTypeId: "hybrid",
+
+            // This sets the center of the map at our location
+            center: {
+                lat:  29.425401,
+                lng: -98.489576
+            }
+        };
+
+
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions),
+            dicks = { lat: 29.425401, lng: -98.489576 };
+
+
+        // Add the marker to our existing map
+       
+        var marker = new google.maps.Marker({
+            position: dicks,
+            map: map,
+            animation: google.maps.Animation.DROP,
+        });
+        google.maps.event.addListener(marker, 'click', toggleBounce);
+
+        setTimeout(function() {  marker.setAnimation(google.maps.Animation.BOUNCE); }, 3000);
+
+        function toggleBounce() {
+
+            if (marker.getAnimation() != null) {
+                marker.setAnimation(null);
+            } else {
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+            }
+        }
+        
+
+        // Create a new infoWindow object with content
+        var infowindow = new google.maps.InfoWindow({
+            content: 
+                "<div class=\"infoWindowHeader\"" + 
+                    "<h1>" + "<center>" + "<em>" + "Dick's Last Resort" + "</em>" + "</center>" + "</h1>"  +
+                    "<ul>" +
+                        "<li>" + "Mean-spirited, but in a \"fun\" way." + "</li>" +
+                        "<li>" + "Basic synopsis of the restaurant: pay people to be mean to you while you eat average tasting food."+ "</li>" +
+                    "</ul>" +
+                "</div>",
+            maxWidth: 220,
+        });
+
+        // Open the window using our map and marker
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
+
+
+    })();
+    </script>
+</body>
