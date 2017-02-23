@@ -1,0 +1,10 @@
+jQuery ID Selector:
+
+	ID Selector Basics:
+		$("#(idNameHere)").css("(propertyToChange)", "(newProperty)");
+
+	Class Selector Basics:
+		$(."(classNameHere)")
+
+	Element Selector Basics:
+		$("(elementNameHere)")
