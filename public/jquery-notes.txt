@@ -1,4 +1,4 @@
-jQuery ID Selector:
+jQuery Selectors:
 
 	ID Selector Basics:
 		$("#(idNameHere)").css("(propertyToChange)", "(newProperty)");
@@ -8,3 +8,12 @@ jQuery ID Selector:
 
 	Element Selector Basics:
 		$("(elementNameHere)")
+
+	Multiple Selector Basics:
+		$("(elementOne), (elementTwo), (#classOne)")
+
+		$((id,class,element)).css({
+			"property": "attribute",
+			"property": "attribute",
+			"property": "attribute",
+		}).

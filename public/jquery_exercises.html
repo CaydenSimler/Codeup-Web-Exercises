@@ -30,32 +30,32 @@
 		
 // ===================  Exercise 1  ======================
 
-		// $(document).ready(function() {
+		$(document).ready(function() {
   //   		alert( 'The DOM has finished loading!' );
-		// });
+		
 
 
 // ===================  Exercise 2: ID Selectors  ======================	
 
-		// var paragraph = $("#paragraph").html();
+			// var paragraph = $("#paragraph").html();
 
-		// alert(paragraph);
+			// alert(paragraph);
 
 
 // ===================  Exercise 3: Class Selectors  ======================	
 
-		// $(".codeup").css("border", "1px solid red");
+			// $(".codeup").css("border", "1px solid red");
 
 
 // ===================  Exercise 4: Element Selectors  ======================	
 
-		$("li").css("font-size", "20px");
+			// $("li").css("font-size", "20px");
 
-		$("h1, p, li").css("background-color", "yellow");
+			// $("h1, p, li").css("background-color", "yellow");
 
-		var headingOne = $("h1").html();
+			// var headingOne = $("h1").html();
 
-		alert(headingOne);
+			// alert(headingOne);
 
 
 // ===================  Exercise 5: Multiple Selectors  ======================	
@@ -63,7 +63,34 @@
 	// All the exercise wanted was to combine all the element selectors from the previous exercise into one selector, but I had already done that so nothing has changed. Just wanted to add this not in though.
 
 
+// ===================  Exercise 6: Mouse Events  ======================
 
+			$("h1").click(
+				function() {
+					$(this).css("background-color", "lime");
+				}
+			);
+
+			$("p").dblclick(
+				function() {
+					$(this).css("font-size", "18px");
+				}
+			);
+
+			$("li").hover(
+				function() {
+					$(this).css("color", "red");
+				},
+				function() {
+					$(this).css("color", "white");
+				}
+			);
+
+
+
+
+
+		});
 
 	</script>
 
