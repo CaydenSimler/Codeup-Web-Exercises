@@ -19,13 +19,13 @@
 
 
 			$("dt").click(function() {
-				$(".toggle").toggleClass("invisible");
+				$(".invisible").toggle();
 			});
 
 			$(".nationalParkBullets:first-of-type").css("font-weight", "bold");
 
 			$("li").click(function () {
-				$(this).parent().toggleClass("invisible");
+				$(this).parent().hide();
 			});
 
 
