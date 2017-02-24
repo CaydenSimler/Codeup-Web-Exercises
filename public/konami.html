@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+<body>
+    <marquee scrollamount=30 behavior=scroll><h1 class="hoverClass">Lives Remaining: 3</h1></marquee>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+
+
+        "use strict";
+
+        $("body").css("background-color", "red");
+        $("h1").css("color", "white");
+        	
+        var allowedKeys = {
+        	38: "up",
+        	40: "down",
+        	37: "left",
+        	39: "right",
+        	66: "b",
+        	65: "a",
+        	13: "enter",
+        };
+
+        var konamiCode = ["up", "up", "down", "down", "left", "right", "left", "right", "b", "a", "enter"];
+
+        var defaultPosition = 0;
+
+       	$(document).keyup(function(event){
+        	
+        	var code = allowedKeys[event.keyCode];
+
+        	var requiredKeys = konamiCode[defaultPosition];
+
+        	if (code == requiredKeys) {
+        		defaultPosition++;
+
+        		if (defaultPosition == konamiCode.length)
+      				cheatActivated();
+  			} else {
+  				defaultPosition = 0;
+  			}
+
+        });
+
+
+       	var greatSuccess = new Audio(great-success-borat.mp3).play()
+        function cheatActivated() {
+        	$("body").html("<audio autoplay><source src=\"great-success-borat.mp3\" type=\"audio/mpeg\"></audio><marquee scrollamount=30 behavior=scroll><h1>Lives Remaining: 33</h1></marquee><br><center><img src=\"/img/success.gif\" height=\"500px\" width=\"750px\"></center>").css({
+        		"background-color": "green",
+        		"color": "white",
+        		"background-image": "/img/shaq.gif"
+        	})
+
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

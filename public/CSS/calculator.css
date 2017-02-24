@@ -17,7 +17,7 @@ body {
 .calculatorBoxButton1 {
 	background-image:url("/img/raining.gif");
 	border-radius: 30px;
-	border: 3px solid gray;
+	border: 2px solid gray;
 	background-repeat: no-repeat;
 	height: 300px;
 	background-position: bottom;
@@ -38,7 +38,7 @@ body {
 .calculatorBoxButton2 {
 	background-image:url("/img/shaq.gif");
 	border-radius: 30px;
-	border: 3px solid gray;
+	border: 2px solid gray;
 	background-repeat: no-repeat;
 	height: 300px;
 	background-position: top left;
@@ -60,7 +60,7 @@ body {
 .calculatorBoxButton3 {
 	background-image:url("/img/raining_pizza.gif");
 	border-radius: 30px;
-	border: 3px solid gray;
+	border: 2px solid gray;
 	background-repeat: no-repeat;
 	height: 300px;
 	background-size: 600px;
@@ -83,7 +83,7 @@ body {
 .calculatorBoxButton4 {
 	background-image:url("/img/space.jpg");
 	border-radius: 30px;
-	border: 3px solid gray;
+	border: 2px solid gray;
 	background-repeat: no-repeat;
 	height: 300px;
 	background-size: 600px;
@@ -106,7 +106,7 @@ body {
 .calculatorBoxButton5 {
 	background-image:url("/img/beach.jpg");
 	border-radius: 30px;
-	border: 3px solid gray;
+	border: 2px solid gray;
 	background-repeat: no-repeat;
 	height: 300px;
 	background-size: 600px;
@@ -129,7 +129,7 @@ body {
 .calculatorBoxButton6 {
 	background-image:url("/img/storm.jpg");
 	border-radius: 30px;
-	border: 3px solid gray;
+	border: 2px solid gray;
 	background-repeat: no-repeat;
 	height: 300px;
 	background-size: 600px;
