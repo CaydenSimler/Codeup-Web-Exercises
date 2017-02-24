@@ -22,6 +22,12 @@
 				$(".toggle").toggleClass("invisible");
 			});
 
+			$(".nationalParkBullets:first-of-type").css("font-weight", "bold");
+
+			$("li").click(function () {
+				$(this).parent().toggleClass("invisible");
+			});
+
 
 	    });
 
@@ -76,6 +82,35 @@
 		<br>
 		<dt class="question">How do I obtain a park pass?</dt>
 			<dd class="invisible toggle" id="answer">You can obtain park passes by visiting your nearest park site. Most sites have passes available; we recommend calling a park prior to your visit.</dd>
+	</dl>
+
+
+
+
+	<ul><div class="nationalPark">Big Bend</div>
+		<li class="nationalParkBullets">Busy season is usually between November through April.</li>
+		<li class="nationalParkBullets">Park camping and lodging is often full to capacity during 3-day holiday weekends, Thanksgiving week, the Christmas holiday season, and spring break.</li>
+		<li class="nationalParkBullets">Having a pet with you will limit some of your activities and explorations in the park. In addition, desert temperatures and predators are a serious threat to your pet's well being.</li>
+		<li class="nationalParkBullets">The Rio Grande serves as the international boundary between the United States and Mexico. A passport is required for entry into Mexico.</li>
+	</ul>
+
+	<br>
+
+	<ul><div class="nationalPark">Guadalupe Mountains</div>
+		<li class="nationalParkBullets">Located in Salt Flat, Texas</li>
+		<li class="nationalParkBullets">The Dog Canyon Ranger Station on the north side of the park is open year round for visitors with the exception of December 25th. Visitors can obtain brochures, maps, and backpacking permits during business hours.</li>
+		<li class="nationalParkBullets">With over 86 miles of trails and three different ecosystems to explore, Guadalupe Mountains offers a vast range of outdoor activities for visitors to choose from.</li>
+		<li class="nationalParkBullets">Cell phone coverage is very unreliable in the park.</li>
+	</ul>
+
+	<ul><div class="nationalPark">San Antonio Missions</div>
+		<li class="nationalParkBullets">Located in San Antonio, Texas</li>
+		<li class="nationalParkBullets">Missions San Juan and Espada are open 10:00 am - 5:00 pm daily. All sites closed Thanksgiving Day, Christmas Day, and New Year's Day.</li>
+		<li class="nationalParkBullets">Over the course of a year, the temperature typically varies from 40°F to 95°F and is rarely below 29°F or above 100°F. The warm season lasts from May through September with an average daily high temperature above 90°F and a low of 75°F.</li>
+		<li class="nationalParkBullets">This park has four distinct visitor areas, each between 2-3 miles from the previous one.</li>
+	</ul>
+
+
 
 </body>
 </html>
