@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+
+    <style>
+
+        tr, td {
+            padding: 10px;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .displayButton {
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        .sep {
+            color: red;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .refresh {
+            font-size: 80%;
+        }
+
+    </style>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+<body>
+
+    <div class="col-xs-1"></div>
+
+    <h1 class="displayStore"><span class="displayButton col-xs-4">My Tool Store<span class="refresh glyphicon glyphicon-refresh"></span></span></h1>
+
+
+    <div class="col-xs-12"></div>
+
+    <div class="col-xs-1"></div>
+    <table id="products">
+
+        <tr>
+            <th class="title">Title<span class="sep">|</span></th>
+            <th class ="quantity">Quantity<span class="sep">|</span></th>
+            <th class="price">Price<span class="sep">|</span></th>
+            <th class="categories">Categories</th>
+        </tr>
+
+        <tbody id="insertProducts"></tbody>
+
+    </table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function() {
+
+        "use strict";
+
+        // TODO: Create an ajax GET request for /data/inventory.json
+        // TODO: Take the data from inventory.json and append it to the products table
+        
+
+
+    function getData() {
+
+        var url="data/inventory.json";
+
+        $.get(url, function(data, status){
+
+                var addToTable = "";
+
+                $.each(data, function(index, item) {
+                    addToTable += item.title + "<tr>" + "<td>" + item.title + "</td>" + "<td>" + item.quantity + "</td>" + "<td>" + item.price + "</td>" + "<td>" + item.categories + "</td>"
+                });
+
+                $("#insertProducts").append(addToTable);
+        });
+
+
+    }
+
+
+        $(".refresh").click(function() {
+
+            $("#insertProducts").html("");
+            getData();
+
+        });
+
+    getData();
+
+
+    });
+
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>

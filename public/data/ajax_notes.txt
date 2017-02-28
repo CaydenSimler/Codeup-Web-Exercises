@@ -1,0 +1,16 @@
+Always do when setting up an AJAX request:
+	1st: Define the url
+		var url = "data/inventory.json";
+	2nd: Decide what type of request you're making
+		get or post
+		var request = $.get(url);
+	3rd: Use and define a .fail and .done method
+		request.fail(function (data, status) {
+			alert("Request Failed");
+		})
+
+		request.done(function(data) {
+			alert("Finished");
+		})
+
+If you can console.log() data then you can input it into HTML

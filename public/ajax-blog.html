@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>AJAX Blog</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <style>
+
+    	h1 {
+    		color: #4EA5D9;
+    		font-size: 100px;
+    		text-align: center;
+    	}
+
+    	body {
+    		background-color: #224870;
+    	}
+
+		.title {
+			font-size: 40px;
+			font-weight: bold;
+			text-align: center;
+			color: #224870;
+			border: 1px solid #224870;
+		}
+    	
+    	.date {
+    		font-size: 25px;
+    		text-align: center;
+    		color: #224870;
+    		font-family: 'Lobster', cursive;
+    	}
+
+    	.content {
+    		font-size: 20px;
+    		color: #224870;
+    	}
+
+    	.categories {
+    		text-align: center;
+    		font-size: 20px;
+    		color: #224870;
+    	}
+
+    	.border {
+    		padding: 30px;
+    		background-color: #4EA5D9;
+    	}
+
+    </style>
+
+</head>
+
+<body>
+
+<span class="refresh"><h1>My Blog</h1></span>
+<br>
+
+<div id="posts"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function() {
+
+        "use strict";
+
+        function getBlogEntries() {
+
+        	var url="data/blog.json";
+
+        	$.get(url, function(data, status) {
+
+        		var bodyContent="";
+
+        		$.each(data, function(index, post) {
+        			bodyContent += 
+        			"<div class='border'>" +
+
+        			"<p class='title'>" +
+        				post.title + 
+        			"</p>" +
+
+        			"<p class='date'>" + 
+        				post.date + 
+        			"</p>" + 
+
+        			"<p class='content'>" + 
+        				post.content +
+        			"</p>" + 
+
+        			"<p class='categories'>" + 
+        			"| " + post.categories.join(" || ") + " |" +
+        			"</p>" +
+
+        			"</div>" +
+
+        			"<br><br>";
+        		});
+
+        		$("#posts").append(bodyContent);
+
+        	});
+
+        }
+
+        $(".refresh").click(function() {
+
+            $("#posts").html("");
+            getBlogEntries();
+
+        });
+
+    	getBlogEntries();
+
+
+
+
+    });
+
+
+</script>
+
+</body>
+
+</html>

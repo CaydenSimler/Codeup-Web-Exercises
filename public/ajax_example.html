@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+
+	<style>
+		th {
+			color: blue;
+		}
+
+
+	</style>
+
+</head>
+<body>
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		var stats = $("#results");
+		var url="data/inventory.json";
+		var content = "";
+		var gameContent = "";
+		var gameDetails = $("#gameDetails");
+
+		// Ajax Request
+
+		function showGameStats(value) {
+			$.get(url).done(function(data) {
+				var game = data.favoriteGames[value]
+				gameContent = "";
+				gameDetails.html("");
+				gameContent+= "<p><span class ='stats'>Hours:</span>" + games.hoursPlayed + "<p>";
+
+			})
+		}
+
+		// Print Array of Games
+
+		function gameArrayPrint(array) {
+			var someString = "";
+			array.forEach(function(element, index, array)) {
+				someString += "<span class='game' data-dbid='" + index + "'>" + element.title + "</span>";
+			});
+
+			return someString;
+		}
+
+
+
+	});
+
+
+</script>
+</body>
+</html>
