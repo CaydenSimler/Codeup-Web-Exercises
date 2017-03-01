@@ -13,7 +13,7 @@
         }
 
         #animate-box {
-            background-color: blue;
+            background-color: red;
             height: 250px;
             margin: 15px;
             position: relative;
@@ -102,13 +102,17 @@
         for(var i = 0; i <= 5; i++) {
             $("#square-loop").click(function() {
                 $("#animate-box").animate({
-                    left: "+=1000px"
+                    left: "+=1000px",
+                    backgroundColor: "red"
                 }, 2000).animate({
-                    top: "+=400px"
+                    top: "+=400px",
+                    backgroundColor: "yellow"
                 }, 2000).animate({
-                    left: "-=1000px"
+                    left: "-=1000px",
+                    backgroundColor: "green"
                 }, 2000).animate({
-                    top: "-=400px"
+                    top: "-=400px",
+                    backgroundColor: "blue"
                 }, 2000);
             })
         }

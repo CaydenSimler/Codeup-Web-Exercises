@@ -1,0 +1,61 @@
+in the problem solving process, outline the main steps/sequences of stuff we need to do
+
+step one: 
+	make sure we can send an AJAX request to the source data
+	make an AJAX request to /data/blog.json to ge tthe data
+	console.log() that data
+		1. send an AJAX get request to /data/blog.json
+		2. always define the funciton that the .fail and .done method calls
+		3. start with both .fail and .done only console.logging the data they get
+
+	data has an array of blog posts
+	each blog post is represented as an object
+	the object's properties are:
+		title is a string
+		content is a string
+		categories is an array of strings
+		date is a string
+
+	var url = "/data/blog.json";
+
+	var request = $.get(url);
+
+	request.fail(function(){
+		console.log("error");
+	});
+
+	request.done(function(data){
+		console.log(data);
+
+		var htmlSTring = "";
+
+		data.forEach(function(post){
+			htmlString += post.title;
+			htmlString += post.date;
+			htmlString += post.content;
+			htmlSting += post.categories;
+		});
+
+		$("#posts").html(htmlString)
+	});
+
+
+==========================================================================
+step two: 
+	decide what HTML elements the data should be
+
+==========================================================================
+step three:
+	get each pice of data in the right HTML tag
+	add any styling (add appropriate bootstrap class names to HTML elements)
+
+==========================================================================
+step four:
+	get all the blog posts into the HTML 
+		in order to do this, you need to iterate across the array and us JS to write HTML
+
+==========================================================================
+step five: 
+	add a button that refreshes the data without reloading the entire page/browser
+	to test this, we'll add new blog content (even if it's lorem ipsum) to blog.json and click refresh without reloading the page
+

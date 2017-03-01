@@ -1,13 +1,13 @@
 [
     {
-        "title": "My First Blog Post",
+        "title": "Latin for Incipientium",
         "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "categories": [
-            "greek"
+            "latin"
         ],
         "date": "January 25, 2015"
     }, {
-        "title": "The Second Post",
+        "title": "Sugar with a side of Cupcakes",
         "content": "Cupcake ipsum dolor sit amet gummies. Cake chocolate sweet ice cream oat cake biscuit bear claw dessert. Jujubes marzipan toffee apple pie pastry dragée jujubes marshmallow. Dragée chocolate gingerbread liquorice chocolate bar jujubes. Sweet chocolate bar jelly-o chocolate cake candy carrot cake cotton candy macaroon marzipan. Sweet roll biscuit sweet gummies topping sesame snaps tootsie roll sugar plum pie. Sweet muffin croissant chocolate cake chupa chups. Donut croissant gummies donut powder ice cream. Chupa chups halvah apple pie topping jelly beans donut candy canes donut. Bonbon cake gummi bears cheesecake tart topping powder liquorice gummi bears.",
         "categories": [
             "family",
@@ -17,7 +17,7 @@
         ],
         "date": "February 14, 2015"
     }, {
-        "title": "The Third Post",
+        "title": "Spicy Jalapeño Bacon",
         "content": "Spicy jalapeno bacon ipsum dolor amet burgdoggen ham hock landjaeger frankfurter beef filet mignon pork pig ball tip shank venison cow beef ribs tri-tip meatloaf. Burgdoggen ham frankfurter, fatback sirloin ribeye shankle hamburger meatloaf pork chop short loin. Meatball tail chicken, biltong venison beef tongue doner shankle burgdoggen kielbasa pig. Sausage prosciutto tri-tip, venison biltong shank cow porchetta turkey. Pork biltong corned beef tenderloin meatloaf. Capicola landjaeger brisket, picanha pastrami chicken shoulder short loin alcatra jowl ham hock spare ribs flank bacon.",
         "categories": [
             "bacon",
@@ -25,5 +25,13 @@
             "food"
         ],
         "date": "February 27, 2017"
+    }, {
+        "title": "Business Class",
+        "content": "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+        "categories": [
+            "corporate",
+            "work"
+        ],
+        "date": "February 28, 2017"
     }
 ]

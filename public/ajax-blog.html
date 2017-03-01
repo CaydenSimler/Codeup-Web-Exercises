@@ -5,6 +5,7 @@
 	<title>AJAX Blog</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
     <style>
 
     	h1 {
@@ -54,13 +55,13 @@
 
 <body>
 
-<span class="refresh"><h1>My Blog</h1></span>
-<br>
+	<div class="refresh"><h1>AJAX Blog</h1></div>
+	<br>
 
-<div id="posts"></div>
+	<div id="posts"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>
+<script type="text/javascript">
 
     $(document).ready(function() {
 
@@ -68,38 +69,65 @@
 
         function getBlogEntries() {
 
-        	var url="data/blog.json";
+        	var url = "data/blog.json";
+        	var request = $.get(url);
 
-        	$.get(url, function(data, status) {
+        	request.fail(function(){
+        		console.log("Something went wrong :(");
+        	});
+
+
+        	request.done(function(data){
 
         		var bodyContent="";
 
         		$.each(data, function(index, post) {
         			bodyContent += 
-        			"<div class='border'>" +
+        			"<div class='col-xs-12'>" +
+        				"<div class='col-xs-1'></div>" +
+        				"<div class='col-xs-12 col-lg-10'>" +
+	        				"<div class='border'>" +
 
-        			"<p class='title'>" +
-        				post.title + 
-        			"</p>" +
+	        				"<p class='title'>" +
+	        					post.title +
+	        				"</p>" +
 
-        			"<p class='date'>" + 
-        				post.date + 
-        			"</p>" + 
+	        				"<p class='date'>" + 
+	        					post.date + 
+	        				"</p>" +
 
-        			"<p class='content'>" + 
-        				post.content +
-        			"</p>" + 
+	        				"<p class='content'>" + 
+	        					post.content +
+	        				"</p>" + 
 
-        			"<p class='categories'>" + 
-        			"| " + post.categories.join(" || ") + " |" +
-        			"</p>" +
+	        				// post.categories.forEach(function(category){
+	        				// 	bodyContent += "<button class='categories'>" + category + "</button>";
+	        				// }) + 
 
+	        				"<p class='categories'>" + 
+	        					"| " + post.categories.join(" || ") + " |" +
+	        				"</p>" +
+
+	        				"</div>" +
+        				"</div>" +
+        				"<div class='col-xs-1'></div>" +
         			"</div>" +
-
-        			"<br><br>";
+        			"<div class='col-xs-12 invisible'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus iste laborum, eos est velit, suscipit debitis aut consectetur quas in itaque qui repellendus aliquam dicta nulla incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quaerat</div>";
         		});
 
+
         		$("#posts").append(bodyContent);
+
+        		$(".content").hide();
+        		$(".categories").hide();
+        		$(".date").hide();
+
+        		// $(".title").forEach(function())
+        		$(".title").click(function() {
+        			$(".content").fadeToggle(1000);
+        			$(".categories").fadeToggle(1000);
+        			$(".date").fadeToggle(1000);
+        		});
 
         	});
 
