@@ -87,9 +87,57 @@
 		}
 
 		#map-canvas {
-            height: 300px;
+            height: 400px;
+            left: 12px;
         }
 
+        .searchBoxContainer {
+			background-color: #FFF;
+			height: 400px;
+			right: 12px;
+        }
+
+        .dragIconLabel {
+        	left: 12px;
+        }
+		
+		.searchLabel {
+			right: 12px;
+		}
+
+		textarea {
+			background-color: #75B3CE;
+			width: 100%;
+			border: 0px;
+			color: #FFF;
+			font-size: 30px;
+			height: 50px;
+			padding-top: 15px;
+			outline: none;
+			resize: none;
+		}
+
+		.latitudeLable {
+			font-size: 30px;
+			color: #75B3CE;
+		}
+
+		.longitudeLable {
+			font-size: 30px;
+			color: #75B3CE;
+			text-align: right;
+		}
+
+		.submitButton {
+			background-color: #75B3CE;
+			color: #FFF;
+			font-size: 20px;
+			text-align: center; 
+			width: 88%;
+			right: 15px;
+			padding-top: 5px;
+			cursor: pointer;
+		}
 
 	</style>
 
@@ -102,16 +150,16 @@
 <!-- ================== Outside Box ========================= -->
 	<div class="col-xs-10 container">
 
-		<div class="col-xs-12 cityNamePlugHeader" id="text"></div>
+		<div class="col-xs-12 cityNamePlugHeader clearThis" id="text"></div>
 
 		<!-- <div class="col-xs-12 invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At alias enim tenetur, hic eos pariatur facere, neque ipsum assumenda quaera</div> -->
 
-<!-- ====================== Day Title ======================= -->
+<!-- ====================== Day Scrolling Box ======================= -->
 		<div class="col-xs-12">
 			<div class="col-xs-1"></div>
 
 			<div class="col-xs-10 dayNumberBoxes">
-				<marquee scrollamount="10" class="today">Seven day forecast for <span class="cityNamePlugScroll"></span> | High - <span class="todayHighPlugScroll"></span>° | Low - <span class="todayLowPlugScroll"></span>° | Humidity - <span class="todayHumidityPlugScroll"></span>%<span class="jacket"></span><span class="rainCoat"></span></marquee>
+				<marquee scrollamount="10" class="today">Seven day forecast for: <span class="cityNamePlugScroll clearThis"></span> | High - <span class="todayHighPlugScroll clearThis"></span>° | Low - <span class="todayLowPlugScroll clearThis"></span>° | Humidity - <span class="todayHumidityPlugScroll clearThis"></span>%<span class="jacket clearThis"></span><span class="rainCoat clearThis"></span></marquee>
 			</div>
 
 			<div class="col-xs-1"></div>
@@ -121,11 +169,29 @@
 
 <!-- ====================== Google Map ==================== -->
     	
-    	<div class="col-xs-1"></div>
-    	<div class="col-xs-10">
-    		<div id="map-canvas"></div>
+    	<div class="col-xs-1 dayCounterLeft dragIconLabel">
+    		D<br>R<br>A<br>G<br><br>T<br>O<br><br>S<br>E<br>A<br>R<br>C<br>H
     	</div>
+    	<div class="col-xs-6" id="map-canvas"></div>
     	<div class="col-xs-1"></div>
+
+<!-- ======================= Latitude and Longitude Search Box ====================== -->
+    	<div class="col-xs-3 searchBoxContainer">
+    		<div class="col-xs-12 invisible">Lorem ipsum</div>
+    		<div class="col-xs-12 latitudeLable">Latitude</div>
+			<div class="col-xs-12"><textarea style="overflow:hidden" class="latSearch clearThis"></textarea></div>
+    		<div class="col-xs-12 longitudeLable">Longitude</div>
+			<div class="col-xs-12"><textarea style="overflow:hidden" class="lngSearch clearThis"></textarea></div>
+    		<div class="col-xs-12 latitudeLable">City</div>
+			<div class="col-xs-12"><textarea style="overflow:hidden"></textarea></div>
+    		<div class="col-xs-12 invisible">Lorem ipsum</div>
+    		<div class="col-xs-1"></div>
+			<div class="col-xs-10 submitButton">Get Forecast</div>
+			<div class="col-xs-1"></div>
+    	</div>
+    	<div class="col-xs-1 dayCounterRight searchLabel">
+    		T<br>Y<br>P<br>E<br><br>T<br>O<br><br>S<br>E<br>A<br>R<br>C<br>H
+    	</div>
 
     	<div class="col-xs-12 invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At alias enim tenetur, hic eos pariatur facere, neque ipsum assumenda quaera</div>
 
@@ -138,16 +204,16 @@
 			</div>
 
 <!-- ============================ Day One Content ========================= -->
-			<div class="col-xs-10 boxes">
+			<div class="col-xs-10 boxes dayOne">
 				<div class="col-xs-12 invisible">Lorem</div>
-				<div class="col-xs-12 dayTempPlugOne"></div>
+				<div class="col-xs-12 dayTempPlugOne clearThis"></div>
 				<div class="col-xs-12 seperator"></div>
-				<div class="col-xs-6 morningTempOne" id="dayOneContentLeft"></div>
-				<div class="col-xs-6 humidityOne" id="dayOneContentRight"></div>
-				<div class="col-xs-6 noonTempOne" id="dayOneContentLeft"></div>
-				<div class="col-xs-6 pressureOne" id="dayOneContentRight"></div>
-				<div class="col-xs-6 nightTempOne" id="dayOneContentLeft"></div>
-				<div class="col-xs-6 windSpeedOne" id="dayOneContentRight"></div>
+				<div class="col-xs-6 morningTempOne clearThis" id="dayOneContentLeft"></div>
+				<div class="col-xs-6 humidityOne clearThis" id="dayOneContentRight"></div>
+				<div class="col-xs-6 noonTempOne clearThis" id="dayOneContentLeft"></div>
+				<div class="col-xs-6 pressureOne clearThis" id="dayOneContentRight"></div>
+				<div class="col-xs-6 nightTempOne clearThis" id="dayOneContentLeft"></div>
+				<div class="col-xs-6 windSpeedOne clearThis" id="dayOneContentRight"></div>
 				<div class="col-xs-12 invisible">Lorem</div>
 			</div>
 
@@ -161,14 +227,14 @@
 
 			<div class="col-xs-4 boxes dayTwo">
 				<div class="col-xs-12 invisible">Lorem</div>
-				<div class="col-xs-12 dayTempPlugTwo" id="dayHighLowPlug"></div>
+				<div class="col-xs-12 dayTempPlugTwo clearThis" id="dayHighLowPlug"></div>
 				<div class="col-xs-12 seperator"></div>
-				<div class="col-xs-12 morningTempTwo" id="dayContent"></div>
-				<div class="col-xs-12 humidityTwo" id="dayContent"></div>
-				<div class="col-xs-12 noonTempTwo" id="dayContent"></div>
-				<div class="col-xs-12 pressureTwo" id="dayContent"></div>
-				<div class="col-xs-12 nightTempTwo" id="dayContent"></div>
-				<div class="col-xs-12 windSpeedTwo" id="dayContent"></div>
+				<div class="col-xs-12 morningTempTwo clearThis" id="dayContent"></div>
+				<div class="col-xs-12 humidityTwo clearThis" id="dayContent"></div>
+				<div class="col-xs-12 noonTempTwo clearThis" id="dayContent"></div>
+				<div class="col-xs-12 pressureTwo clearThis" id="dayContent"></div>
+				<div class="col-xs-12 nightTempTwo clearThis" id="dayContent"></div>
+				<div class="col-xs-12 windSpeedTwo clearThis" id="dayContent"></div>
 				<div class="col-xs-12 invisible">Lorem</div>
 			</div>
 
@@ -179,14 +245,14 @@
 
 			<div class="col-xs-4 boxes dayThree">
 				<div class="col-xs-12 invisible">Lorem</div>
-				<div class="col-xs-12 dayTempPlugThree" id="dayHighLowPlug"></div>
+				<div class="col-xs-12 dayTempPlugThree clearThis" id="dayHighLowPlug"></div>
 				<div class="col-xs-12 seperator"></div>
-				<div class="col-xs-12 morningTempThree" id="dayContent"></div>
-				<div class="col-xs-12 humidityThree" id="dayContent"></div>
-				<div class="col-xs-12 noonTempThree" id="dayContent"></div>
-				<div class="col-xs-12 pressureThree" id="dayContent"></div>
-				<div class="col-xs-12 nightTempThree" id="dayContent"></div>
-				<div class="col-xs-12 windSpeedThree" id="dayContent"></div>
+				<div class="col-xs-12 morningTempThree clearThis" id="dayContent"></div>
+				<div class="col-xs-12 humidityThree clearThis" id="dayContent"></div>
+				<div class="col-xs-12 noonTempThree clearThis" id="dayContent"></div>
+				<div class="col-xs-12 pressureThree clearThis" id="dayContent"></div>
+				<div class="col-xs-12 nightTempThree clearThis" id="dayContent"></div>
+				<div class="col-xs-12 windSpeedThree clearThis" id="dayContent"></div>
 				<div class="col-xs-12 invisible">Lorem</div>
 			</div>
 
@@ -203,14 +269,14 @@
 
 			<div class="col-xs-4 boxes dayThree">
 				<div class="col-xs-12 invisible">Lorem</div>
-				<div class="col-xs-12 dayTempPlugFour" id="dayHighLowPlug"></div>
+				<div class="col-xs-12 dayTempPlugFour clearThis" id="dayHighLowPlug"></div>
 				<div class="col-xs-12 seperator"></div>
-				<div class="col-xs-12 morningTempFour" id="dayContent"></div>
-				<div class="col-xs-12 humidityFour" id="dayContent"></div>
-				<div class="col-xs-12 noonTempFour" id="dayContent"></div>
-				<div class="col-xs-12 pressureFour" id="dayContent"></div>
-				<div class="col-xs-12 nightTempFour" id="dayContent"></div>
-				<div class="col-xs-12 windSpeedFour" id="dayContent"></div>
+				<div class="col-xs-12 morningTempFour clearThis" id="dayContent"></div>
+				<div class="col-xs-12 humidityFour clearThis" id="dayContent"></div>
+				<div class="col-xs-12 noonTempFour clearThis" id="dayContent"></div>
+				<div class="col-xs-12 pressureFour clearThis" id="dayContent"></div>
+				<div class="col-xs-12 nightTempFour clearThis" id="dayContent"></div>
+				<div class="col-xs-12 windSpeedFour clearThis" id="dayContent"></div>
 				<div class="col-xs-12 invisible">Lorem</div>
 			</div>
 
@@ -220,14 +286,14 @@
 <!-- ======================== Day Five Content ========================= -->
 			<div class="col-xs-4 boxes dayThree">
 				<div class="col-xs-12 invisible">Lorem</div>
-				<div class="col-xs-12 dayTempPlugFive" id="dayHighLowPlug"></div>
+				<div class="col-xs-12 dayTempPlugFive clearThis" id="dayHighLowPlug"></div>
 				<div class="col-xs-12 seperator"></div>
-				<div class="col-xs-12 morningTempFive" id="dayContent"></div>
-				<div class="col-xs-12 humidityFive" id="dayContent"></div>
-				<div class="col-xs-12 noonTempFive" id="dayContent"></div>
-				<div class="col-xs-12 pressureFive" id="dayContent"></div>
-				<div class="col-xs-12 nightTempFive" id="dayContent"></div>
-				<div class="col-xs-12 windSpeedFive" id="dayContent"></div>
+				<div class="col-xs-12 morningTempFive clearThis" id="dayContent"></div>
+				<div class="col-xs-12 humidityFive clearThis" id="dayContent"></div>
+				<div class="col-xs-12 noonTempFive clearThis" id="dayContent"></div>
+				<div class="col-xs-12 pressureFive clearThis" id="dayContent"></div>
+				<div class="col-xs-12 nightTempFive clearThis" id="dayContent"></div>
+				<div class="col-xs-12 windSpeedFive clearThis" id="dayContent"></div>
 				<div class="col-xs-12 invisible">Lorem</div>
 			</div>
 
@@ -243,14 +309,14 @@
 
 			<div class="col-xs-4 boxes dayThree">
 				<div class="col-xs-12 invisible">Lorem</div>
-				<div class="col-xs-12 dayTempPlugSix" id="dayHighLowPlug"></div>
+				<div class="col-xs-12 dayTempPlugSix clearThis" id="dayHighLowPlug"></div>
 				<div class="col-xs-12 seperator"></div>
-				<div class="col-xs-12 morningTempSix" id="dayContent"></div>
-				<div class="col-xs-12 humiditySix" id="dayContent"></div>
-				<div class="col-xs-12 noonTempSix" id="dayContent"></div>
-				<div class="col-xs-12 pressureSix" id="dayContent"></div>
-				<div class="col-xs-12 nightTempSix" id="dayContent"></div>
-				<div class="col-xs-12 windSpeedSix" id="dayContent"></div>
+				<div class="col-xs-12 morningTempSix clearThis" id="dayContent"></div>
+				<div class="col-xs-12 humiditySix clearThis" id="dayContent"></div>
+				<div class="col-xs-12 noonTempSix clearThis" id="dayContent"></div>
+				<div class="col-xs-12 pressureSix clearThis" id="dayContent"></div>
+				<div class="col-xs-12 nightTempSix clearThis" id="dayContent"></div>
+				<div class="col-xs-12 windSpeedSix clearThis" id="dayContent"></div>
 				<div class="col-xs-12 invisible">Lorem</div>
 			</div>
 
@@ -260,14 +326,14 @@
 <!-- ======================== Day Seven Content ========================= -->
 			<div class="col-xs-4 boxes dayThree">
 				<div class="col-xs-12 invisible">Lorem</div>
-				<div class="col-xs-12 dayTempPlugSeven" id="dayHighLowPlug"></div>
+				<div class="col-xs-12 dayTempPlugSeven clearThis" id="dayHighLowPlug"></div>
 				<div class="col-xs-12 seperator"></div>
-				<div class="col-xs-12 morningTempSeven" id="dayContent"></div>
-				<div class="col-xs-12 humiditySeven" id="dayContent"></div>
-				<div class="col-xs-12 noonTempSeven" id="dayContent"></div>
-				<div class="col-xs-12 pressureSeven" id="dayContent"></div>
-				<div class="col-xs-12 nightTempSeven" id="dayContent"></div>
-				<div class="col-xs-12 windSpeedSeven" id="dayContent"></div>
+				<div class="col-xs-12 morningTempSeven clearThis" id="dayContent"></div>
+				<div class="col-xs-12 humiditySeven clearThis" id="dayContent"></div>
+				<div class="col-xs-12 noonTempSeven clearThis" id="dayContent"></div>
+				<div class="col-xs-12 pressureSeven clearThis" id="dayContent"></div>
+				<div class="col-xs-12 nightTempSeven clearThis" id="dayContent"></div>
+				<div class="col-xs-12 windSpeedSeven clearThis" id="dayContent"></div>
 				<div class="col-xs-12 invisible">Lorem</div>
 			</div>
 
@@ -294,62 +360,71 @@ $("document").ready(function() {
 
 	var APPID = "7f8e3aa0aad113510e0c1eaafd1c17b8";
 	var url = "http://api.openweathermap.org/data/2.5/forecast/daily";
+	var currentLat = "",
+		currentLng = "";
 
 // ============================ Google Maps API ===========================
-
-
-    // Set our map options
     var mapOptions = {
         // Set the zoom level
-        zoom: 10,
+        zoom: 4,
         mapTypeId: "roadmap",
-
-        // This sets the center of the map at our location
         center: {
-            lat:  29.423017,
-            lng: -98.48527
+            lat:  29.5480,
+            lng: -98.2911
+        },
+        streetViewControl: false,
+        styles: [
+        {
+        	"featureType":"water",
+        	"elementType":"all",
+        	"stylers":[{"color":"#75B3CE"}]
         }
+        ]
     };
 
-
-
-    // Render the map
+// ==================== Rendering the Map =======================
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions),
-        latlng = { lat: 29.423017, lng: -98.48527 };
+        latlng = { lat: 29.5480, lng: -98.2911 };
 
-    // Add the marker to our existing map
-
+// ==================== Adding the Marker =========================
 	var marker = new google.maps.Marker({
 	    position: latlng,
 	    map: map,
 	    draggable: true,
-	  });
+	});
+
+// ======================= Draggable Marker to Print Lat and Lon =====================
+	google.maps.event.addListener(marker, 'dragend', function(marker){
+	    var latLng = marker.latLng;
+	    var currentLat = latLng.lat();
+	    var currentLng = latLng.lng();
+
+	    getWeather(currentLat, currentLng);
+	});
+
+	
 
        
-
-
-
-
 // ============================ Open Weather Map API =================================
-	function getWeather() {
-		var bodyContent = "";
-		var city="";
+	function getWeather(lat, lng) {
 
 		$.get(url, {
 			APPID: APPID,
-			// q: "San Antonio",
-			lat: 29.423017,
-			lon: -98.48527,
+			lat: lat,
+			lon: lng,
 			cnt: 7,
-			// cnt = count(number of days for daily forecast)
 			units: "imperial"
 		}).fail(function(data, status) {
 			console.log("Failed to load:" + status);
 		}).done(function(data) {
-			console.log(data);
 
+			$(".clearThis").html("");
+
+
+// ===================== City Name Header ======================
 			$(".cityNamePlugHeader").append(data.city.name);
 
+// ================= Scrolling Current Weather Information ==================
 			$(".cityNamePlugScroll").append(data.city.name);
 			$(".todayHighPlugScroll").append(data.list[0].temp.max);
 			$(".todayLowPlugScroll").append(data.list[0].temp.min);
@@ -427,15 +502,15 @@ $("document").ready(function() {
 			}
 
 			if (data.list[0].humidity >= 85) {
-				$(".rainCoat").append(" It's raining right now, so you might want to grab an umbrella.");
+				$(".rainCoat").append(" Also, it's raining right now, so grab your umbrella! :)");
 			} else {
-				$(".rainCoat").append(" Not raining right now, but check out the forecast for later in order to better plan your day!");
+				$(".rainCoat").append(" Also, it's not raining right now, but check out the forecast for later in order to better plan your day! :)");
 			}
 			
 		});
 	}
 
-	getWeather();
+	getWeather(29.5480, -98.2911);
 
 
 
