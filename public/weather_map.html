@@ -115,6 +115,28 @@
 			padding-top: 15px;
 			outline: none;
 			resize: none;
+			padding-left: 10px;
+		}
+
+		::-webkit-input-placeholder { /* Chrome */
+  			color: white;
+  			opacity: .5;
+  			text-align: center;
+		}
+		:-ms-input-placeholder { /* IE 10+ */
+  			color: white;
+  			opacity: .5;
+  			text-align: center;
+		}
+		::-moz-placeholder { /* Firefox 19+ */
+  			color: white;
+  			opacity: .5;
+  			text-align: center;
+		}
+		:-moz-placeholder { /* Firefox 4 - 18 */
+  			color: white;
+  			opacity: .5;
+  			text-align: center;
 		}
 
 		.latitudeLable {
@@ -178,12 +200,11 @@
 <!-- ======================= Latitude and Longitude Search Box ====================== -->
     	<div class="col-xs-3 searchBoxContainer">
     		<div class="col-xs-12 invisible">Lorem ipsum</div>
-    		<div class="col-xs-12 latitudeLable">Latitude</div>
-			<div class="col-xs-12"><textarea style="overflow:hidden" class="latSearch clearThis"></textarea></div>
-    		<div class="col-xs-12 longitudeLable">Longitude</div>
-			<div class="col-xs-12"><textarea style="overflow:hidden" class="lngSearch clearThis"></textarea></div>
-    		<div class="col-xs-12 latitudeLable">City</div>
-			<div class="col-xs-12"><textarea style="overflow:hidden"></textarea></div>
+			<div class="col-xs-12"><textarea style="overflow:hidden" class="latSearch clearThis" placeholder="latitude"></textarea></div>
+			<div class="col-xs-12 invisible">Lorem ipsum</div>
+			<div class="col-xs-12"><textarea style="overflow:hidden" class="lngSearch clearThis" placeholder="longitude"></textarea></div>
+			<div class="col-xs-12 invisible">Lorem ipsum</div>
+			<div class="col-xs-12"><textarea style="overflow:hidden" placeholder="city"></textarea></div>
     		<div class="col-xs-12 invisible">Lorem ipsum</div>
     		<div class="col-xs-1"></div>
 			<div class="col-xs-10 submitButton">Get Forecast</div>
@@ -418,6 +439,8 @@ $("document").ready(function() {
 			console.log("Failed to load:" + status);
 		}).done(function(data) {
 
+			console.log(data);
+
 			$(".clearThis").html("");
 
 
@@ -520,53 +543,6 @@ $("document").ready(function() {
 
 });
 
-// MAKE THE WEATHER FORCAST
-
-// make a function to get the weather object from the OpenWeatherMap API
-
-// base url should be "http://api.openweathermap.org/data/2.5/forecast/daily"
-
-// parameter cnt controls how many days of forcasts will be returned as an array of objects
-
-// practice writing console.logs of various parts of the OpenWeatherMap object...
-// console.log the humidity of the 2nd day
-// console.log the humidity of all the days (maybe use .forEach?)
-// console.log the temprature of the 3rd day in celsius
-// console.log the temprature of the 3rd day in fahrenheit
-// console.log all types of information you will ultimately display for a single day in the 3-day forcast div
-// console.log all type of information you will ultimately display for all days in the 3-day forcast divs
-
-// write html and css to make/style a three-day forcast set of divs (may use design from curriculum)
-
-// create a function to append specific parts of the OpenWeatherMap map object to the DOM and call it in the .done() of the OpenWeatherMap map GET request.
-
-// remember to first console.log specific data from the OpenWeatherMap object, then work on adding to the DOM
-
-// read and reread the curriculum and OpenWeatherMap docs carefully on how to get an image of the weather forcast 
-
-// hint: "http://openweathermap.org/img/w/" + whateverTheWeatherIconValueIs 
-
-// verify that the OpenWeatherMap data populates by hard coding in lat and lon values
-
-// create lat and lon variables to hold lat and lon values.
-
-// add lat and lon properties to the function that calls the OpenWeatheMap API GET request
-
-// add an input field for lat and lon with button that fires a new request to the OpenWeatherMap API and passes the lat and lon values from the input fields into the request.
-
-
-
-// CREATE THE GOOGLE MAP
-
-// using syntax from the previous Google Maps exercise, add a map below the OpenWeatherMap forcast
-// add a marker to the map and make it draggable
-// create a marker drag event that console logs the lat and lon where the marker is dropped
-
-
-
-// WIRE UP GOOGLE MAP TO WEATHER API
-
-// add the function call that makes the Weather API request to the marker drag event and pass in the lat and lon values of the marker to the Weather API request function
 
 </script>
 
