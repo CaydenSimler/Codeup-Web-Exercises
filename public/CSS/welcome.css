@@ -22,10 +22,14 @@ body {
 	background-position: bottom;
 }
 
-
-.simpleSimonMargin {
-	padding-top: 40px;
+.bottomMargin {
+	margin-bottom: 40px;
 }
+
+.topMargin {
+	margin-top: -40px;
+}
+
 /*Text Colors Used*/
 
 #twhite {
