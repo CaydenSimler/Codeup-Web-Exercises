@@ -1,7 +1,7 @@
 <?php  
 
 session_start();
-
+require ('functions.php');
 
 // if the user is already logged in, redirect to the authorized.php page. checks both the status of the $_SESSION array and what is inside of it
 if (isset($_SESSION['logged_in_user']) && $_SESSION['logged_in_user'] === 'admin') {
@@ -13,10 +13,8 @@ if (isset($_SESSION['logged_in_user']) && $_SESSION['logged_in_user'] === 'admin
 // header message displayed on the top of the page. will change if username or password is incorrect
 $message = "Please sign in to view content";
 
-
-
-//
-if (isset($_POST['username']) && isset($_POST['password'])) {
+	
+if (inputGet('username') && inputGet('password')) {
 	// sets the username and password using input from the form. also a trim added to remove spaces or tabs
 	$username = trim($_POST['username']);
 	$password = trim($_POST['password']);

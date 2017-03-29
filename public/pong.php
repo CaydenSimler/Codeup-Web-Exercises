@@ -1,9 +1,27 @@
-<?php
+<?php 
 
-	require('ping-pong-controller.php');
+// on page load, set counter to 0
+// make a button or link that increments counter by 1
+// make a button or link that decrements counter by 1
+
+require('functions.php');
+
+function pageController() {
+	$data = [];
+
+	
+	// "null coallesce" = if a value exists, get that value and assign to variable, else assign default value
+	if (inputGet('count')) {
+		$data['count'] = $_GET['count'];
+	} else {
+		$data['count'] = 0;
+	}
+
+	return $data;
+}
 
 
-
+extract(pageController());
 
 ?>
 
@@ -84,13 +102,13 @@
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="text textLeft">
-				<a href="" class="miss">MISS</a>
+				<a href="ping.php?count=0" class="miss">MISS</a>
 			</div>
 			
-			<div class="text textCenter">OR</div>
+			<div class="text textCenter"><?= $count ?></div>
 			
 			<div class="text textRight">
-				<a href="" class="hit">HIT</a>
+				<a href="ping.php?count=<?= $count++?>" class="hit">HIT</a>
 			</div>
 		</div>
 	</div>

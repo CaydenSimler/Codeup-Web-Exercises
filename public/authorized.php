@@ -2,6 +2,7 @@
 
 
 session_start();
+require ('functions.php');
 
 // checks whether the $_SESSION array contains the variable 'logged_in_user' and checks whether the logged in user variable has the right content. if either return true, then it pushes the user back to the login page so they cannot access the authorized page
 if(!isset($_SESSION['logged_in_user']) || $_SESSION['logged_in_user'] !== 'admin') {
@@ -9,8 +10,8 @@ if(!isset($_SESSION['logged_in_user']) || $_SESSION['logged_in_user'] !== 'admin
 	exit;
 } 
 
-// checks the URL for ?logout=1. This is assigned when the user clicks a link and adds the ?logout=1 to the url which will then cause this if statement to return as true. clears the $_SESSION array and takes the user to the login page.
-if(isset($_GET['logout']) && $_GET['logout'] == 1) {
+// checks the URL for ?logout=1. assigned when the user clicks a link and adds the ?logout=1 to the url which will then cause this if statement to return as true. clears the $_SESSION array and takes the user to the login page.
+if(inputGet('logout') && inputGet('logout') == 1) {
 	clearSession();
 	header('Location: login.php');
 	exit;
