@@ -1,0 +1,28 @@
+What is a database?
+	safe, reliable, fast, and convenient way to persist massive amounts of data to be used and updated by multiple users and applications
+
+
+Why use a database?
+	safe, reliable, fast, and convenient.
+	
+
+What is RDBMS?
+	Relational Database Management System
+
+	it is the most widely used data model used among Database Management Systems
+
+What is MySQL?
+	a widely used free, open source RDBMS
+
+
+What are rows, columns, tables, and databases usded for in the context of MySQL?
+	a way for MySQL to organize data
+
+
+How do you access the MySQL client?
+	vagrant ssh -> mysql -u 'user' -p
+
+
+How much money would it cost to buy enough "normal-sized" rubber ducks to fill the instructor office?
+	$23,500 for standard
+	$30,000 for custom

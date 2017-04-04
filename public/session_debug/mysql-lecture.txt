@@ -1,0 +1,157 @@
+INTRO TO MYSQL
+
+Database Advantages:
+	safe, reliable, fast, and convenient way to persist massive amounts of data to be used and updated by multiple users and applications
+
+	the world runs on databases
+
+Data Model:
+	a way data is stored. MySQL organizes data in a relational model
+
+Relational Model:
+	a data model wwhere data is organized into relations (tables) that are very similar to spreadsheets
+
+	it is the most widely used data model used among Database Management Systems
+
+	a DMS that uses a relational model is known as Relational Database Management System
+
+RDBMS
+	a piece of software to organize and manage a database using the relational model
+
+MySQL
+	RDBMS
+	free
+	open source
+	widely used by small companies and some enterprise market share
+
+SQL "Structured Query Language"
+	a "declarative" language to tell the RDBMS what you want without telling it how to do it
+
+SQL exercise resources
+	http://www.w3resource.com/mysql-exercises/
+	http://sqlzoo.net/wiki/SQL_Tutorial
+
+Subsets of SQL to explore we will explore in the coming lessons:
+	DDL "Data Definition Languge" SQL syntax to create and manipulate databases and tables
+	DCL "Data Control Language" SQL syntax to create and manipulate users and user access
+	DML "Data Manipulation Language" - SQL syntax to create, update and delete data in a database
+    DQL "Data Query Language" - SQL syntax to search for specific data in a database 
+
+
+
+-------------------------------------------------------------------------------------------------
+
+
+
+MYSQL CLIENT AND EXERCISE
+
+Logging in...
+	from inside your vagrant environment:
+		1. type "mysql -u vagrant -p"
+		2. press enter
+		3. type "vagrant" as your password
+		4. press enter
+
+Help menu...
+	at any time, access the help menu by typing "help". see a help menu of topics by typing "help contents"
+
+Exit MySQL client...
+	type "exit" to exit the client
+
+Format client output...
+	most SQL commands end with a semicolon " ; "
+
+	to see results formatted in a different way, end the query with " \G "
+
+
+-------------------------------------------------------------------------------------------------
+
+
+
+MySQL application will run on the same server as the server side programming language
+
+
+MYSQL USERS AREN'T THE SAME THING AS APPLICATION'S USERS
+	MySQL users are users/connections authorized to manipulate the database
+
+	scenario is 3 apps on the same server:
+		todo, craigslist, dating app
+			TODO
+				user called todo_user
+				GRANT SELECT, INSERT, UPDATE, DELETE ON todo_db.* TO 'todo_user'@'192.168.77.1';
+
+			for the craigslist app, we'll have a mysql user called craigslist_user
+			for the dating app, we'll have a mysql user called dating_user
+		each application should have it's own user that only has access to that application's database
+
+
+'mysql' or 'database' to mean the database system, or a specific database
+	mysql has multiple databases
+	ech database will have multiple tables
+		blog_posts
+		id, title, body, created_at, modified_at
+		1, hello world, lorem ipsum.../ 2017-04-03...
+
+		data or facts live on tables
+		tables live inside of databases
+
+
+
+
+--------------------------------------------------------------------------------------------------
+
+
+MYSQL TABLES
+
+columns have data types:
+	id, username, password, etc
+rows have fields (whatever data that we give the particular entry)
+
+integer data type:
+	a normal INT type goes from -2,147,483,648 to 2,147,483,648
+	an unsigned INT means only positive numbers 4,294,967,296
+
+
+---------------------------------------------------------------------------------
+
+You do not have to specify every column in your table, but the set of values must match up exactly with the set of columns.
+
+
+read entire table
+	SELECT * FROM albums\G
+
+delete entire table
+	TRUNCATE albums;
+
+insert single values for all columns
+	INSERT INTO albums (artist, name, release_date, sales, genre) values ("Fall Out Boy", "Dance, Dance", 2007, 2000000, "Punk");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

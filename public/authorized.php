@@ -1,6 +1,6 @@
 <?php 
 
-
+require_once('User.php');
 session_start();
 require ('functions.php');
 
@@ -9,6 +9,15 @@ if(!isset($_SESSION['logged_in_user']) || $_SESSION['logged_in_user'] !== 'admin
 	header('Location: login.php');
 	exit;
 } 
+
+$user = new User();
+$user->username = $_SESSION['logged_in_user'];
+
+if($user->isAdmin()) {
+	$message = "Hello, admin. You can change and update other users and content.";
+} else {
+	$message = "Welcome, guest. You can't edit shit.";
+}
 
 // checks the URL for ?logout=1. assigned when the user clicks a link and adds the ?logout=1 to the url which will then cause this if statement to return as true. clears the $_SESSION array and takes the user to the login page.
 if(inputGet('logout') && inputGet('logout') == 1) {
@@ -107,6 +116,7 @@ $randomNumber = mt_rand(0, 9);
 
 </head>
 <body>
+
 	<div class="row signInBar">
 		<div class="col-xs-12 invisible">lorem</div>
 
@@ -119,7 +129,7 @@ $randomNumber = mt_rand(0, 9);
 	</div>
 
 	<div class="row headerText">
-		<div class="col-xs-12">Welcome to your personal site, <?= $username; ?>!</div>	
+		<?= $message ?> 
 	</div>
 
 
