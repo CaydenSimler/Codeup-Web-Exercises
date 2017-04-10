@@ -127,6 +127,52 @@ insert single values for all columns
 	INSERT INTO albums (artist, name, release_date, sales, genre) values ("Fall Out Boy", "Dance, Dance", 2007, 2000000, "Punk");
 
 
+MIRGATION
+	files that control the structure of a table
+
+SEARCHING
+
+	everything:
+		SELECT * FROM albums;
+
+	select single field from all entries:
+		SELECT artist FROM albums;
+
+	select mutliple fields from all entries:
+		SELECT artist, name FROM albums;
+
+	where clause:
+		SELECT * FROM albums WHERE artist = "Michael Jackson";
+
+	where clause with single column:
+		SELECT name FROM albums WHERE artist = "Michael Jackson";
+
+	limiting select using WHERE and operators:
+		SELECT * FROM albums WHERE artist != "Michael Jackson";
+		SELECT * FROM albums WHERE id > 5;
+
+	checking a column that contains a specific string:
+		SELECT * FROM albums WHERE genre LIKE "%rock%";
+
+	alphabetical order:
+		SELECT artist FROM albums ORDER BY artist;
+
+UPDATING
+
+	UPDATE albums SET artist = "Jackson, Michael" WHERE id = 1;
+
+	UPDATE albums SET release_date = DATE_SUB(release_date, INTERVAL 100 YEAR) WHERE release_date < '1980-01-01';
+
+DELETING
+
+	first step to writing a DELETE statement is to write that exact statement as a SELECT and then make sure you get exactly the data you want
+	
+
+
+
+
+
+
 
 
 
