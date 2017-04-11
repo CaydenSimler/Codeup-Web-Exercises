@@ -1,33 +1,5 @@
 <?php 		
 
-// $employees = [
-// 	[
-// 		'emp_no' => 10001,
-// 		'birth_date' => '1953-09-02',
-// 		'first_name' => 'Georgi',
-// 		'last_name' => 'Facello',
-// 		'gender' => 'M',
-// 		'hire_date' => '1986-06-26'
-// 	],
-// 	[
-// 		'emp_no' => 10002,
-// 		'birth_date' => '1964-06-02',
-// 		'first_name' => 'Bazalel',
-// 		'last_name' => 'Simmel',
-// 		'gender' => 'F',
-// 		'hire_date' => '1985-11-21'
-// 	]
-// ];
-
-// foreach ($employees as $index) {
-// 	foreach ($index as $key => $value) {
-// 		echo $value . PHP_EOL;
-// 	}
-
-// 	echo " " . PHP_EOL;
-// }
-
-
 define("DB_HOST", "localhost");
 define("DB_NAME", "parks_db");
 define("DB_USER", "parks_user");
