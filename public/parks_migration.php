@@ -21,6 +21,7 @@ $createTable =
 		location VARCHAR(120),
 		date_established DATE,
 		area_in_acres DOUBLE,
+		description VARCHAR(1000),
 		PRIMARY KEY (id),
 		UNIQUE (name)
 	)';

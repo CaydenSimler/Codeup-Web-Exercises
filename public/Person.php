@@ -1,24 +1,40 @@
-<?php  
+<?php 
 
 
-class Person
-{
-    public $firstName;
-    public $lastName;
-    public $fruit = array();
 
-    public function roamCountryside()
-    {
-        $distance = mt_rand(1, 10);
+class Person {
 
-        return $this->firstName . " walks {$distance} miles west.";
-    }
+	public $hasPowers = false;
+	public $name;
+	public $languages;
+	public $lastName;
 
-    public function addFruit($fruit)
-    {
-        $this->fruit[] = $fruit;
-    }
+	public function __construct($name, $lastName) {
+		$this->name = $name;
+		$this->lastName = $lastName;
+	}
+
+	public function fullName() {
+		return $this->name . ' ' . $this->lastName;
+	}
 }
+
+// $person = new Person('Cayden', 'Simler'); // Enforce rules when you construct an object
+
+
+
+
+/*
+JAVASCRIPT
+var person = {
+	name: '',
+	languages: ['php', 'css', 'js']
+}
+
+var ryan = Object.create(person);
+ryan.name = 'Ryan';
+ryan.languages = ['php', 'js', 'clojure'];
+*/
 
 
 ?>
